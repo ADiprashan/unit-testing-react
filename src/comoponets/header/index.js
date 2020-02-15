@@ -4,9 +4,9 @@ import "./style.scss";
 const Header = props => {
   return (
     <header>
-      <div className="wrap">
+      <div dclassName="wrap" data-test="headerComponent">
         <div className="logo">
-          <img src="./logo- hemnette.png" alt="logo"></img>
+          <img data-test="logoIMG" src="./logo- hemnette.png" alt="logo"></img>
         </div>
       </div>
     </header>
