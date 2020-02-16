@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Header from "./index";
-import { findBytestAtrr } from "../../Utils";
+import { findByTestAtrr } from "../../Utils";
 
 const setUp = (props = {}) => {
   const component = shallow(<Header {...props} />);
@@ -15,12 +15,12 @@ describe("Header Component", () => {
   });
 
   it("Should render without errors", () => {
-    const wrapper = findBytestAtrr(component, "headerComponent");
+    const wrapper = findByTestAtrr(component, "headerComponent");
     expect(wrapper.length).toBe(1);
   });
 
   it("Should render logo", () => {
-    const logo = findBytestAtrr(component, "logoIMG");
+    const logo = findByTestAtrr(component, "logoIMG");
     expect(logo.length).toBe(1);
   });
 });
