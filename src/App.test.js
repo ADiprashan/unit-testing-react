@@ -38,4 +38,17 @@ describe("App Component", () => {
     const Component = findByTestAtrr(wrapper, "appComponent");
     expect(Component.length).toBe(1);
   });
+
+  it("exampleMethod_updateState should updated state as exoected", () => {
+    const classInstance = wrapper.instance();
+    classInstance.exampleMethod_updateState();
+    const newState = classInstance.state.hideBtn;
+    expect(newState).toBe(true);
+  });
+
+  it("exampleMethod_returnValue should return value as expected", () => {
+    const classInstance = wrapper.instance();
+    const value = classInstance.exampleMethod_returnValue(5);
+    expect(value).toBe(6);
+  });
 });
